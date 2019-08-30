@@ -1,4 +1,4 @@
-import { PureMVC } from "../../Plugs/PureMVC/PureMVC";
+import { PureMVC } from "../../../Plugs/PureMVC/PureMVC";
 import { CalProxy } from "../Models/CalProxy";
 
 export class CalCommand extends PureMVC.MacroCommand{

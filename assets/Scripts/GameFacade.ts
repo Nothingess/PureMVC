@@ -1,7 +1,7 @@
 import { PureMVC } from "../Plugs/PureMVC/PureMVC";
-import { CalProxy, CalData } from "./Models/CalProxy";
-import { CalMediator } from "./Views/CalMediator";
-import { CalCommand } from "./Controllers/CalCommand";
+import { CalProxy } from "./UIFrame/Models/CalProxy";
+import { CalMediator } from "./UIFrame/Views/CalMediator";
+import { CalCommand } from "./UIFrame/Controllers/CalCommand";
 
 const { ccclass, property } = cc._decorator;
 

@@ -1,4 +1,4 @@
-import { PureMVC } from "../../Plugs/PureMVC/PureMVC";
+import { PureMVC } from "../../../Plugs/PureMVC/PureMVC";
 
 export class CalData {
     public inputA: number;

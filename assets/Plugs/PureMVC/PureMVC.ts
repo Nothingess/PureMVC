@@ -249,7 +249,7 @@ export namespace PureMVC {
         /**获取代理数据 */
         getData(): any;
         /**注册
-         * 注册IProxy时由模型调用。
+         * 注册IProxy时由模型层（Model）调用。
          * 这个方法必须是由子类重写，以知道何时注册实例。
          */
         onRegister(): void;
@@ -295,6 +295,7 @@ export namespace PureMVC {
     /**中介者接口 */
     export interface IMediator extends INotifier {
         getMediatorName(): string;
+        /**视图层根节点（用来寻找查找UI节点） */
         getViewComponent(): any;
         setViewComponent(viewComponent: any): void;
         listNotificationInterests(): string[];
@@ -396,7 +397,11 @@ export namespace PureMVC {
                 this.view = View.getInstance();
             }
         }
-
+        /**
+         * 注册命令模式
+         * @param notificationName 消息名称
+         * @param commandClassRef 命令类的引用
+         */
         registerCommand(notificationName: string, commandClassRef: Function): void {
             this.controller.registerCommand(notificationName, commandClassRef);
         }
@@ -637,6 +642,5 @@ export namespace PureMVC {
     }
 
     //#endregion
-
 }
 
