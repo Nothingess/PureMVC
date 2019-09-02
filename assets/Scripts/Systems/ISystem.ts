@@ -29,5 +29,4 @@ export class UISystem extends ISystem {
         facade.registerMediator(new CalMediator(CalMediator.NAME, this.viewRoot));
     }
 
-
 }

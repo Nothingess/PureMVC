@@ -6,7 +6,7 @@ GlobalVar.CONST = {
         /**计算 */
         CALCULATE: "Calculate",
         /**输入有误 */
-        INPUTERROR: "InputError",
+        INPUTE_RROR: "InputError",
         /**结果 */
         RESULT: "Result"
     },
@@ -23,6 +23,11 @@ GlobalVar.CONST = {
             /**提示层 */
             tipLayer: "tipLayer"
         }
+    },
+    /**路径 */
+    UI_PATH: {
+        /**面板预制路径 */
+        PANEL_PATH: "prefabs/uiPanels/"
     }
 
 
