@@ -12048,6 +12048,7 @@ declare namespace cc {
 		static loadResArray(url: string[], completeCallback: (error: Error, resource: any[]) => void): void;
 		static loadResArray(url: string[]): void;
 		static loadResArray(url: string[], type: typeof cc.Asset[]): void;		
+		static loadResArray(url: string[], type: typeof cc.Asset[], completeCallback: (error: Error, resource: any[]) => void): void;		
 		/**
 		Load all assets in a folder inside the "assets/resources" folder of your project.<br>
 		<br>
@@ -12266,6 +12267,11 @@ declare namespace cc {
 		@param assetOrUrl asset object or the raw asset's url 
 		*/
 		static isAutoRelease(assetOrUrl: Asset|string): boolean;	
+		/**
+		 * 获取资源依赖的 json 路径
+		 * @param asset 资源类型
+		 */
+		static _getReferenceKey(asset:cc.Asset): string;
 	}	
 	/** !#en
 	LoadingItems is the queue of items which can flow them into the loading pipeline.<br/>
